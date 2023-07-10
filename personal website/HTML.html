@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="hero">
+    <nav>
+        <div class="logo-container">
+            <img src="./img/logo.jpg" class="logo" />
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="content">
+        <span class="title">Frontend Developer</span>
+        <h1>Hello, I’m <span>Cvetan</span></h1>
+        <p>
+            Welcome to my portfolio website! I'm a frontend developer specializing in creating captivating and user-friendly digital experiences. From responsive layouts to intuitive navigation, I strive to deliver engaging interfaces that leave a lasting impression. Explore my projects and witness how my creativity and technical prowess can enhance your online presence.
+        </p>
+        <a href="#" class="btn">Download CV</a>
+    </div>
+</div>
+
+<section id="about" class="section">
+    <div class="about-content">
+        <div class="center">
+            <h1>About Me</h1>
+        </div>
+        <div class="description">
+            <p>
+                I am a passionate frontend developer with a strong focus on creating exceptional user experiences. I thrive on transforming designs into interactive and engaging websites that captivate users. Through my expertise in HTML, CSS, and JavaScript, I meticulously craft intuitive interfaces that seamlessly blend aesthetics and functionality.
+            </p>
+            <div class="spacer"></div>
+            <p>
+                With a deep understanding of user-centered design principles, I strive to ensure that every website I build is optimized for usability and accessibility. I continuously stay up-to-date with the latest frontend technologies and industry best practices to deliver cutting-edge solutions. My attention to detail and problem-solving skills enable me to overcome challenges and create efficient and scalable code. I am dedicated to collaborating with cross-functional teams to deliver projects that exceed client expectations and enhance the online presence of businesses.
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="col-2">
+    <div class="about-item skills">
+        <h1>Skills</h1>
+        <div class="attributes">
+            <div class="skills-line">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+            </div>
+            <div class="skills-line">
+                <span class="skill">C++</span>
+                <span class="skill">Photoshop</span>
+                <span class="skill">Illustrator</span>
+            </div>
+        </div>
+    </div>
+    <div class="about-item languages">
+        <h1 class="languages-heading">Languages</h1>
+        <div class="attributes">
+            <div class="language">
+                <p>Macedonian</p>
+                <span class="bar"><span class="Macedonian"></span></span>
+            </div>
+            <div class="language">
+                <p>English</p>
+                <span class="bar"><span class="English"></span></span>
+            </div>
+            <div class="language">
+                <p>French</p>
+                <span class="bar"><span class="French"></span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="content-card experience" id="experience">
+    <h1>Experience</h1>
+    <div class="timeline">
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - now</div>
+                <div class="timeline-content">
+                    <h3>timeline item 1</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Ab iusto accusantium nostrum eligendi debitis quisquam.
+                        Corporis at voluptatem culpa officia.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2015 - 2022</div>
+                <div class="timeline-content">
+                    <h3>timeline item 2</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Ab iusto accusantium nostrum eligendi debitis quisquam.
+                        Corporis at voluptatem culpa officia.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2014 - 2015</div>
+                <div class="timeline-content">
+                    <h3>timeline item 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Ab iusto accusantium nostrum eligendi debitis quisquam.
+                        Corporis at voluptatem culpa officia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-card contact" id="contact">
+    <h1>Contact</h1>
+    <form class="form" id="form" action="https://www.freecodecamp.com/email-submit">
+        <div class="input-box">
+            <input type="text" class="text-input" name="name" placeholder="Name" />
+        </div>
+        <div class="input-box">
+            <input type="email" class="text-input" name="email" id="email" placeholder="Email" />
+        </div>
+        <div class="input-box">
+            <input type="subject" class="text-input" name="subject" id="subject"
+                   placeholder="Subject" />
+        </div>
+        <div class="input-box">
+            <textarea name="text" class="message" placeholder="Message..."></textarea>
+        </div>
+        <div class="input-box">
+            <input type="submit" class="submit-btn" id="submit" value="submit" />
+        </div>
+    </form>
+</section>
+</div>
+</div>
+</div>
+
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const target = this.getAttribute('href');
+            if (target === '#home') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                document.querySelector(target).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>
